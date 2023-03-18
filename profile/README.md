@@ -9,9 +9,10 @@ intelligent agents, Semantic Web, knowledge-based networking, ontology
 management, integration of information, security policy analysis, and more.
 
 ErgoAI is an enterprise-level extension of the well-known
-[Flora-2 system](https://flora.sourceforge.net/) and, after being open-sourced by
+[Flora-2 system](https://flora.sourceforge.net/).
+After having been open-sourced by
 [Coherent Knowledge Systems](http://coherentknowledge.com/),
-subsumes Flora-2 for all purposes.
+ErgoAI subsumes Flora-2 for all purposes.
 
 ErgoAI can interact with applications written in several major languages,
 such as Python, Java, and C/C++; it can talk to databases and the Web; and
