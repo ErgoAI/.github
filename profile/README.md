@@ -113,8 +113,8 @@ features that are accessible via XSB.
 
 The ErgoAI source code is split between two repositories:
 
-* [Studio_fidji](ErgoAI/Studio_fidji) - a Java-based IDE code-named Fidji and
-* [ErgoEngine](ErgoAI/ErgoEngine) - the ErgoAI inference engine, 
+* [Studio_fidji](../../../Studio_fidji) - a Java-based IDE code-named Fidji and
+* [ErgoEngine](../../../ErgoEngine) - the ErgoAI inference engine, 
   language and data source
   interfaces, and everything else. The inference engine can be used without
   the IDE in the command window mode, and this is what is normally used
