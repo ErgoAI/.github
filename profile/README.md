@@ -119,3 +119,12 @@ The ErgoAI source code is split between two repositories:
   interfaces, and everything else. The inference engine can be used without
   the IDE in the command window mode, and this is what is normally used
   when ErgoAI is embedded into a larger system.
+
+In addition, we provide stable releases for Linux, Mac, and Windows.
+Installing a stable release is very easy: just download an appropriate release installer (a file named  `ergoAI_XXXXX.run` or `ergoAI_XXXXX.exe`, where XXXXX is the version number) and click your way through the installation.
+These installers do not include the source code, so if one wants that then cloning ErgoAI repositories would still be necessary.
+
+Those who want to contribute to ErgoAI development would need to clone
+[XSB](https://sourceforge.net/p/xsb/code/ci/git-origin/tree/) as well as the aforesaid ErgoAI repositories and compile the source code by themselves. This process is still straightforward for Linux, might be a bit more involved for Mac, and still more for Windows.
+
+
