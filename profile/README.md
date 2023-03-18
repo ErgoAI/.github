@@ -29,8 +29,8 @@ If you are new to ErgoAI, the best place to start is with the [FAQ](https://docs
 and [ErgoAI Studio Manual](https://docs.google.com/document/d/1k_zNnvnEeWWuhvM4cn93i3nFi0VxKCdrNEypYtzhKEY/).  A basic knowledge of Prolog is helpful in
 understanding ErgoAI.  Prolog tutorials and textbooks, for example [Learn
 Prolog Now](http://www.learnprolognow.org/), can be found online.  As you advance to the next stage,
-[ErgoAI Reasoner User's Manual] is a complete reference to the
-system.  [Guide to ErgoAI Packages] provides all the details you will
+[ErgoAI Reasoner User's Manual](https://drive.google.com/file/d/1UzI2bV7DwSOWvmZBKZY-bhyEvbZVmCt-/view?usp=share_link) is a complete reference to the
+system.  [Guide to ErgoAI Packages](https://drive.google.com/file/d/1SiIqWk5p6g15r-4pdtjI3b_sqCDFK1x4/view?usp=sharing) provides all the details you will
 need to connect your ErgoAI knowledge base to the outside world.  
 [ErgoAI Examples Bank](https://sites.google.com/coherentknowledge.com/ergoai-tutorial/example-bank-of-advanced-uses) provides runnable, annotated examples for a variety of
 tasks using ErgoAI to augment the basic  examples found in ErgoAI Tutorial. 
@@ -59,9 +59,9 @@ University in 2011.  The knowledge source is the California Driver's Handbook an
 * [ErgoAI Studio Manual](https://docs.google.com/document/d/1k_zNnvnEeWWuhvM4cn93i3nFi0VxKCdrNEypYtzhKEY/):
   Explains how to use the graphical UI and the Integrated Development Environment (IDE).  The IDE includes an interactive editor, explanation, and query windows, with navigation and debugging tools.
 
-* [ErgoAI Reasoner User's Manual]: Comprehensive reference manual including Ergo language syntax, reasoning engine, debugging tools and more.  For more experienced developers. General understanding of Prolog is a plus.
+* [ErgoAI Reasoner User's Manual](https://drive.google.com/file/d/1UzI2bV7DwSOWvmZBKZY-bhyEvbZVmCt-/view?usp=share_link): Comprehensive reference manual including Ergo language syntax, reasoning engine, debugging tools and more.  For more experienced developers. General understanding of Prolog is a plus.
 
-* [Guide to ErgoAI Packages]: Covers connectors from Ergo to other non-Ergo information sources and systems such as Java, SQL SPARQL, RDF/OWL, tabular data, XML, JSON, and more.
+* [Guide to ErgoAI Packages](https://drive.google.com/file/d/1SiIqWk5p6g15r-4pdtjI3b_sqCDFK1x4/view?usp=sharing): Covers connectors from Ergo to other non-Ergo information sources and systems such as Java, SQL SPARQL, RDF/OWL, tabular data, XML, JSON, and more.
 
 ### FAQ and User's Forum
 
