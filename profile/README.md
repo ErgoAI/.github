@@ -133,14 +133,14 @@ These installers do not include the source code, so if one wants that then cloni
 
 The full details are given in Section 2 of the [ErgoAI Reasoner User's Manual](https://drive.google.com/file/d/1UzI2bV7DwSOWvmZBKZY-bhyEvbZVmCt-/view?usp=share_link).
 
-#### Installing ErgoAI from sources.
+#### Installing ErgoAI from the sources.
 
 Those who want to contribute to ErgoAI development would need to clone
 [XSB](https://sourceforge.net/p/xsb/code/ci/git-origin/tree/) as well as the aforesaid ErgoAI repositories and compile the source code by themselves. This process is still straightforward for Linux, might be a bit more involved for Mac, and still more for Windows.
 
 The main steps in this process are:
 
-* Verification of prerequisites for the installation, as in case of the installation of using an official release.
+* Verification of prerequisites for the installation, as in case of the installation using an official release.
 
 * Compiling XSB.
 
@@ -149,3 +149,9 @@ The main steps in this process are:
 * Compiling the ErgoAI studio using a clone of the `Studio_fidji` repository.
 
 The full details are given in Appendix A of [ErgoAI Reasoner User's Manual](https://drive.google.com/file/d/1UzI2bV7DwSOWvmZBKZY-bhyEvbZVmCt-/view?usp=share_link).
+
+## Reporting Bugs
+
+* Bugs in ErgoAI Reasoner: please report by creating a new issue in Github's Issue Tracker of the  [ErgoEngine](../../../ErgoEngine) repository.
+
+* Bugs in the operations of the ErgoAI Studio: create a new issue in Github's Issue Tracker of the  [Studio_fidji](../../../Studio_fidji) repository.
