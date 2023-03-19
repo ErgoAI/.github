@@ -121,11 +121,31 @@ The ErgoAI source code is split between two repositories:
   the IDE in the command window mode, and this is what is normally used
   when ErgoAI is embedded into a larger system.
 
+#### Installing ErgoAI via an official rlease.
+
 In addition, we provide stable releases for Linux, Mac, and Windows.
-Installing a stable release is very easy: just download an appropriate release installer (a file named  `ergoAI_XXXXX.run` or `ergoAI_XXXXX.exe`, where XXXXX is the version number) and click your way through the installation.
+Installing a stable release is very easy:
+
+* Make sure that the prerequisites for the installation are met. These prerequisites are described in Section 2.1 of [ErgoAI Reasoner User's Manual](https://drive.google.com/file/d/1UzI2bV7DwSOWvmZBKZY-bhyEvbZVmCt-/view?usp=share_link) and also in  [ErgoAI Tutorial](https://sites.google.com/coherentknowledge.com/ergoai-tutorial/ergoai-tutorial/home#h.p_ID_100).
+
+* Download an appropriate release installer (a file named  `ergoAI_XXXXX.run` or `ergoAI_XXXXX.exe`, where XXXXX is the version number) and click your way through the installation.
 These installers do not include the source code, so if one wants that then cloning ErgoAI repositories would still be necessary.
+
+The full details are given in Section 2 of the [ErgoAI Reasoner User's Manual](https://drive.google.com/file/d/1UzI2bV7DwSOWvmZBKZY-bhyEvbZVmCt-/view?usp=share_link).
+
+#### Installing ErgoAI from sources.
 
 Those who want to contribute to ErgoAI development would need to clone
 [XSB](https://sourceforge.net/p/xsb/code/ci/git-origin/tree/) as well as the aforesaid ErgoAI repositories and compile the source code by themselves. This process is still straightforward for Linux, might be a bit more involved for Mac, and still more for Windows.
 
+The main steps in this process are:
 
+* Verification of prerequisites for the installation, as in case of the installation of using an official release.
+
+* Compiling XSB.
+
+* Compiling the ErgoAI engine using a clone of the ErgoEngine repository
+
+* Compiling the ErgoAI studio using a clone of the `Studio_fidji` repository.
+
+The full details are given in Appendix A of [ErgoAI Reasoner User's Manual](https://drive.google.com/file/d/1UzI2bV7DwSOWvmZBKZY-bhyEvbZVmCt-/view?usp=share_link).
