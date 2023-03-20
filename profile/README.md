@@ -158,3 +158,12 @@ The full details are given in Appendix A of [ErgoAI Reasoner User's Manual](http
 * Bugs in ErgoAI Reasoner: please report by creating a new issue in Github's Issue Tracker of the  [ErgoEngine](../../../ErgoEngine) repository.
 
 * Bugs in the operations of the ErgoAI Studio: create a new issue in Github's Issue Tracker of the  [Studio_fidji](../../../Studio_fidji) repository.
+
+## Bibliography
+
+* [About F-logic](https://flora.sourceforge.net/aboutFlogic.html)
+* [About HiLog](https://flora.sourceforge.net/aboutHiLog.html)
+* [About Transaction Logic](https://flora.sourceforge.net/aboutTR.html)
+* [About Defeasible Reasoning](https://flora.sourceforge.net/aboutLPDA.html)
+* [About Flora-2 and ErgoAI](https://flora.sourceforge.net/aboutFlora.html)
+* [Other Related Work](https://flora.sourceforge.net/relatedWorks.html)
