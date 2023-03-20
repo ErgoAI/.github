@@ -130,6 +130,9 @@ Installing a stable release is very easy:
 
 * Download an appropriate release installer (a file named  `ergoAI_XXXXX.run` or `ergoAI_XXXXX.exe`, where XXXXX is the version number) and click your way through the installation.
 These installers do not include the source code, so if one wants that then cloning ErgoAI repositories would still be necessary.
+The release installers can be found by navigating to
+[https://github.com/ErgoAI/.github/releases](https://github.com/ErgoAI/.github/releases),
+choosing the desired release (usually the latest), and clicking on the requisite `.run` or `.exe` file.
 
 The full details are given in Section 2 of the [ErgoAI Reasoner User's Manual](https://drive.google.com/file/d/1UzI2bV7DwSOWvmZBKZY-bhyEvbZVmCt-/view?usp=share_link).
 
