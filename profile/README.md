@@ -136,14 +136,14 @@ choosing the desired release (usually the latest), and clicking on the requisite
 
 The full details are given in Section 2 of the [ErgoAI Reasoner User's Manual](https://drive.google.com/file/d/1UzI2bV7DwSOWvmZBKZY-bhyEvbZVmCt-/view?usp=share_link).
 
-#### Installing ErgoAI from the sources.
+#### Installing ErgoAI from sources.
 
 Those who want to contribute to ErgoAI development would need to clone
 [XSB](https://sourceforge.net/p/xsb/code/ci/git-origin/tree/) as well as the aforesaid ErgoAI repositories and compile the source code by themselves. This process is still straightforward for Linux, might be a bit more involved for Mac, and still more for Windows.
 
 The main steps in this process are:
 
-* Verification of prerequisites for the installation, as in case of the installation using an official release.
+* Verification of prerequisites for the installation, as in the case of the installation via an official release.
 
 * Compiling XSB.
 
