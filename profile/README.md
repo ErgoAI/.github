@@ -72,6 +72,7 @@ University in 2011.  The knowledge source is the California Driver's Handbook an
 A place for users to post questions and answers,
 share interesting projects, and discuss ideas about knowledge based systems
 in general. 
+   - Please subscribe to the forum!!
 
 ### Examples Bank
 
@@ -121,14 +122,14 @@ The ErgoAI source code is split between two repositories:
   the IDE in the command window mode, and this is what is normally used
   when ErgoAI is embedded into a larger system.
 
-#### Installing ErgoAI via an official rlease.
+#### Installing ErgoAI via an official release.
 
 In addition, we provide stable releases for Linux, Mac, and Windows.
 Installing a stable release is very easy:
 
 * Make sure that the prerequisites for the installation are met. These prerequisites are described in Section 2.1 of [ErgoAI Reasoner User's Manual](https://drive.google.com/file/d/1UzI2bV7DwSOWvmZBKZY-bhyEvbZVmCt-/view?usp=share_link) and also in  [ErgoAI Tutorial](https://sites.google.com/coherentknowledge.com/ergoai-tutorial/ergoai-tutorial/home#h.p_ID_100).
 
-* Download an appropriate release installer (a file named  `ergoAI_XXXXX.run` or `ergoAI_XXXXX.exe`, where XXXXX is the version number) and click your way through the installation.
+* Download an appropriate release installer (a file named  `ergoAI_XXXXX.run` or `ergoAI_XXXXX.exe`, where XXXXX is the version number; the `.run` version is for Linux/Mac and the `.exe` version is for Windows) and click your way through the installation.
 These installers do not include the source code, so if one wants that then cloning ErgoAI repositories would still be necessary.
 The release installers can be found by navigating to
 [https://github.com/ErgoAI/.github/releases](https://github.com/ErgoAI/.github/releases),
@@ -152,6 +153,11 @@ The main steps in this process are:
 * Compiling the ErgoAI studio using a clone of the `Studio_fidji` repository.
 
 The full details are given in Appendix A of [ErgoAI Reasoner User's Manual](https://drive.google.com/file/d/1UzI2bV7DwSOWvmZBKZY-bhyEvbZVmCt-/view?usp=share_link).
+
+Please subscribe to
+[Ergo and XSB Users Forum](https://groups.google.com/a/coherentknowledge.com/g/ergoai-xsb-forum)
+and, if you like ErgoAI, [write a review](https://github.com/ErgoAI/ErgoEngine/stargazers).
+
 
 ## Reporting Bugs
 
