@@ -1,3 +1,3 @@
 # .github
 General info common to all the repositories in ErgoAI.
-More [about ErgoAI](profile/README.md)
+For more - see [about ErgoAI](profile/README.md).

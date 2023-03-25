@@ -1,10 +1,26 @@
+- [About ErgoAI](#about-ergoai)
+  * [Documentation, Examples, Help](#documentation--examples--help)
+    + [Getting Started](#getting-started)
+    + [Tutorials](#tutorials)
+    + [ErgoAI Manuals](#ergoai-manuals)
+    + [FAQ and User's Forum](#faq-and-user-s-forum)
+    + [Examples Bank](#examples-bank)
+    + [XSB Manuals](#xsb-manuals)
+  * [Installation](#installation)
+      - [Installing ErgoAI via an official release](#installing-ergoai-via-an-official-release)
+      - [Installing ErgoAI from the sources](#installing-ergoai-from-the-sources)
+  * [Reporting Bugs](#reporting-bugs)
+  * [Bibliography](#bibliography)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 # About ErgoAI
 
 ErgoAI  is an advanced object-oriented platform for knowledge representation and
-reasoning in an enterprise. It is a dialect of F-logic with numerous extensions,
-including meta-programming in the style of HiLog, logical updates in the
-style of Transaction Logic, and defeasible reasoning. Applications include
+reasoning in an enterprise. It is a dialect of [F-logic](https://flora.sourceforge.net/aboutFlogic.html) with numerous extensions,
+including meta-programming in the style of [HiLog](https://flora.sourceforge.net/aboutHiLog.html), logical updates in the
+style of [Transaction Logic](https://flora.sourceforge.net/aboutTR.html), and [defeasible reasoning](https://flora.sourceforge.net/aboutLPDA.html). Applications include
 intelligent agents, Semantic Web, knowledge-based networking, ontology
 management, integration of information, security policy analysis, and more.
 
@@ -122,7 +138,7 @@ The ErgoAI source code is split between two repositories:
   the IDE in the command window mode, and this is what is normally used
   when ErgoAI is embedded into a larger system.
 
-#### Installing ErgoAI via an official release.
+#### Installing ErgoAI via an official release
 
 In addition, we provide stable releases for Linux, Mac, and Windows.
 Installing a stable release is very easy:
@@ -137,7 +153,7 @@ choosing the desired release (usually the latest), and clicking on the requisite
 
 The full details are given in Section 2 of the [ErgoAI Reasoner User's Manual](https://drive.google.com/file/d/1UzI2bV7DwSOWvmZBKZY-bhyEvbZVmCt-/view?usp=share_link).
 
-#### Installing ErgoAI from sources.
+#### Installing ErgoAI from the sources
 
 Those who want to contribute to ErgoAI development would need to clone
 [XSB](https://sourceforge.net/p/xsb/code/ci/git-origin/tree/) as well as the aforesaid ErgoAI repositories and compile the source code by themselves. This process is still straightforward for Linux, might be a bit more involved for Mac, and still more for Windows.
@@ -156,7 +172,7 @@ The full details are given in Appendix A of [ErgoAI Reasoner User's Manual](http
 
 Please subscribe to
 [Ergo and XSB Users Forum](https://groups.google.com/a/coherentknowledge.com/g/ergoai-xsb-forum)
-and, if you like ErgoAI, [write a review](https://github.com/ErgoAI/ErgoEngine/stargazers).
+and, if you like ErgoAI, [give us a star](https://github.com/ErgoAI/ErgoEngine/stargazers).
 
 
 ## Reporting Bugs
