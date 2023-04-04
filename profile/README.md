@@ -6,7 +6,7 @@
     + [FAQ and User's Forum](#faq-and-user-s-forum)
     + [Examples Bank](#examples-bank)
     + [XSB Manuals](#xsb-manuals)
-  * [Installation](#installation)
+  * [Download and Installation](#installation)
       - [Installing ErgoAI via an official release](#installing-ergoai-via-an-official-release)
       - [Installing ErgoAI from the sources](#installing-ergoai-from-the-sources)
   * [Reporting Bugs](#reporting-bugs)
@@ -127,7 +127,7 @@ features that are accessible via XSB.
 * [The XSB System Volume 2: Interfaces and Packages](https://xsb.sourceforge.net/manual2/manual2.pdf)
 
 
-## Installation
+## Download and Installation
 
 The ErgoAI source code is split between two repositories:
 
