@@ -6,7 +6,7 @@
     + [FAQ and User's Forum](#faq-and-user-s-forum)
     + [Examples Bank](#examples-bank)
     + [XSB Manuals](#xsb-manuals)
-  * [Download and Installation](#installation)
+  * [Download and Installation](#download-and-installation)
       - [Installing ErgoAI via an official release](#installing-ergoai-via-an-official-release)
       - [Installing ErgoAI from the sources](#installing-ergoai-from-the-sources)
   * [Reporting Bugs](#reporting-bugs)
