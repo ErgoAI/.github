@@ -182,7 +182,7 @@ If the old official release is no longer needed, it can be easily uninstalled by
 
 **Linux/Mac:**
 * starting the version of ErgoAI you want to discard (double-click on its icon, the studio or terminal version - doesn't matter)
-* type  System[uninstall]@\sys.  and confirm
+* type  `System[uninstall]@\sys.`  and confirm
 * delete the ErgoAI window
 
 **Windows:** use the standard uninstallation facilities in Windows.
