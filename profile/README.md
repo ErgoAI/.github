@@ -9,6 +9,7 @@
   * [Download and Installation](#download-and-installation)
       - [Installing ErgoAI via an official release](#installing-ergoai-via-an-official-release)
       - [Installing ErgoAI from the sources](#installing-ergoai-from-the-sources)
+      - [Uninstallation](#uninstallation)
   * [Reporting Bugs](#reporting-bugs)
   * [Bibliography](#bibliography)
 
@@ -173,6 +174,21 @@ The full details are given in Appendix A of [ErgoAI Reasoner User's Manual](http
 Please subscribe to
 [Ergo and XSB Users Forum](https://groups.google.com/a/coherentknowledge.com/g/ergoai-xsb-forum)
 and, if you like ErgoAI, [give us a star](https://github.com/ErgoAI/ErgoEngine/stargazers).
+
+#### Uninstallation
+
+If one installed an official release of ErgoAI and a new release comes out, installing the new release doesn't necessarily uninstalls the old (for example, one might want to keep a stable old release and to play with a new pre-release).
+If the old official release is no longer needed, it can be easily uninstalled by
+
+**Linux/Mac:**
+
+* starting the version of ErgoAI you want to discard (double-click on its icon, the studio or terminal version - doesn't matter)
+* type  System[uninstall]@\sys.  and confirm
+* delete the ErgoAI window
+
+**Windows:** use the standard uninstallation facilities in Windows.
+
+Installations from the sources can't be uninstalled that way and there is no need to. Simply delete the directory where the sources are residing.
 
 
 ## Reporting Bugs
