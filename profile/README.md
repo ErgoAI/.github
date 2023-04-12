@@ -178,10 +178,10 @@ and, if you like ErgoAI, [give us a star](https://github.com/ErgoAI/ErgoEngine/s
 #### Uninstallation
 
 If one installed an official release of ErgoAI and a new release comes out, installing the new release doesn't necessarily uninstalls the old (for example, one might want to keep a stable old release and to play with a new pre-release).
-If the old official release is no longer needed, it can be easily uninstalled by
+If the old official release is no longer needed, it can be easily uninstalled as follows.
 
 **Linux/Mac:**
-* starting the version of ErgoAI you want to discard (double-click on its icon, the studio or terminal version - doesn't matter)
+* start the version of ErgoAI you want to discard (double-click on its icon, the studio or terminal version - doesn't matter)
 * type  `System[uninstall]@\sys.`  and confirm
 * delete the ErgoAI window
 
