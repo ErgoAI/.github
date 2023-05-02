@@ -3,7 +3,7 @@
     + [Getting Started](#getting-started)
     + [Tutorials](#tutorials)
     + [ErgoAI Manuals](#ergoai-manuals)
-    + [FAQ and User's Forum](#faq-and-user-s-forum)
+    + [FAQ and User's Forum](#faq-and-users-forum)
     + [Examples Bank](#examples-bank)
     + [XSB Manuals](#xsb-manuals)
   * [Download and Installation](#download-and-installation)
