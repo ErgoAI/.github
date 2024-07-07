@@ -18,8 +18,8 @@
 
 # About ErgoAI
 
-ErgoAI  is an advanced object-oriented platform for knowledge representation and
-reasoning in an enterprise. It is a dialect of [F-logic](https://flora.sourceforge.net/aboutFlogic.html) with numerous extensions,
+ErgoAI  is an advanced multi-paradigm platform for knowledge representation and
+reasoning in an enterprise. It is a dialect of the object-based logic known as [Frame Logic (or F-logic)](https://flora.sourceforge.net/aboutFlogic.html) with numerous extensions,
 including meta-programming in the style of [HiLog](https://flora.sourceforge.net/aboutHiLog.html), logical updates in the
 style of [Transaction Logic](https://flora.sourceforge.net/aboutTR.html), and [defeasible reasoning](https://flora.sourceforge.net/aboutLPDA.html). Applications include
 intelligent agents, Semantic Web, knowledge-based networking, ontology
@@ -27,9 +27,9 @@ management, integration of information, security policy analysis, and more.
 
 ErgoAI is an enterprise-level extension of the well-known
 [Flora-2 system](https://flora.sourceforge.net/).
-After having been open-sourced by
+After open-sourcing of ErgoAI by
 [Coherent Knowledge Systems](http://coherentknowledge.com/),
-ErgoAI subsumes Flora-2 for all purposes.
+Flora-2 was deprecated and is no longer maintained because ErgoAI subsumes Flora-2 for all purposes.
 
 ErgoAI can interact with applications written in several major languages,
 such as Python, Java, and C/C++; it can talk to databases and the Web; and
