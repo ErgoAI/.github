@@ -1,0 +1,128 @@
+FROM amazoncorretto:8
+
+# Set environment variables
+ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-amazon-corretto
+ENV XSB_DIR=/opt/ergoai/XSB
+ENV PATH="$XSB_DIR/bin:$JAVA_HOME/bin:$PATH"
+ENV CLASSPATH=$JAVA_HOME/lib
+
+# Install build dependencies and optional packages for Amazon Linux
+RUN yum update -y && yum install -y \
+    git \
+    make \
+    gcc \
+    gcc-c++ \
+    glibc-devel \
+    curl-devel \
+    pcre-devel \
+    unixODBC-devel \
+    autoconf \
+    automake \
+    libtool \
+    python3 \
+    python3-pip \
+    perl \
+    wget \
+    tar \
+    which \
+    mysql \
+    mysql-devel \
+    xorg-x11-server-Xorg \
+    xorg-x11-xauth \
+    xorg-x11-apps \
+    libX11 \
+    libX11-devel \
+    libXau \
+    libXau-devel \
+    libxcb \
+    libxcb-devel \
+    libXdmcp \
+    libXdmcp-devel \
+    libXext \
+    libXext-devel \
+    libXi \
+    libXi-devel \
+    libXrender \
+    libXrender-devel \
+    libXrandr \
+    libXrandr-devel \
+    libXtst \
+    libXtst-devel \
+    libXt-devel \
+    libXft-devel \
+    && yum clean all
+
+# Install Apache Ant
+RUN wget https://archive.apache.org/dist/ant/binaries/apache-ant-1.10.14-bin.tar.gz && \
+    tar -xzf apache-ant-1.10.14-bin.tar.gz -C /opt && \
+    ln -s /opt/apache-ant-1.10.14/bin/ant /usr/bin/ant && \
+    rm apache-ant-1.10.14-bin.tar.gz
+
+# Create working directory
+WORKDIR /opt/ergoai
+
+# 1. Build XSB
+RUN git clone https://git.code.sf.net/p/xsb/code xsb_repo && \
+    mv xsb_repo/XSB . && \
+    rm -rf xsb_repo && \
+    cd XSB/build && \
+    ./configure && \
+    ./makexsb
+
+# 2. Create proper directory structure and clone repos
+WORKDIR /opt/ergoai
+RUN mkdir -p ERGOAI
+
+# Clone repositories
+RUN git clone https://github.com/ErgoAI/ErgoEngine.git && \
+    git clone https://github.com/ErgoAI/Studio_fidji.git
+
+# Set up proper directory structure according to documentation
+RUN mv ErgoEngine ERGOAI/ && \
+    mv Studio_fidji ERGOAI/ && \
+    # Create symbolic link to XSB inside ERGOAI folder
+    cd ERGOAI && \
+    ln -s /opt/ergoai/XSB XSB
+
+# 3. Build the ERGOAI Engine
+WORKDIR /opt/ergoai/ERGOAI/ErgoEngine/ErgoAI
+RUN sed -i 's/test -f docs\/Makefile && cd docs && make || echo "" > \/dev\/null/echo "Skipping docs generation"/' Makefile && \
+    # Modify interprolog timeout
+    sed -i 's/engineTimeout\s*=\s*8000/engineTimeout = 30000/' ergo_lib/ergo2java/interprolog.P || echo "Couldn't modify interprolog timeout" && \
+    make clean && \
+    ./makeergo all /opt/ergoai/XSB/bin/xsb || true
+
+# 4. Make sure the paths file exists and has the right content
+RUN echo "/opt/ergoai/XSB/bin/xsb" > .ergo_paths && \
+    chmod +x runergo
+
+# 5. Build Studio from the correct directory
+WORKDIR /opt/ergoai/ERGOAI
+RUN ErgoEngine/ErgoAI/Studio_scripts/buildErgoStudio.sh || true
+
+# 6. Create a wrapper script that points to the correct directory
+WORKDIR /opt/ergoai
+RUN echo '#!/bin/bash' > run_ergo.sh && \
+    echo 'export ERGO_DIR=/opt/ergoai/ERGOAI/ErgoEngine/ErgoAI' >> run_ergo.sh && \
+    echo 'export JAVA_HOME=/usr/lib/jvm/java-1.8.0-amazon-corretto' >> run_ergo.sh && \
+    echo 'export CLASSPATH=$JAVA_HOME/lib' >> run_ergo.sh && \
+    echo 'export PATH=$ERGO_DIR/bin:$JAVA_HOME/bin:$PATH' >> run_ergo.sh && \
+    echo 'cd $ERGO_DIR' >> run_ergo.sh && \
+    echo 'if [ "$1" = "shell" ]; then' >> run_ergo.sh && \
+    echo '  exec ./runergo "${@:2}"' >> run_ergo.sh && \
+    echo 'elif [ -z "$1" ]; then' >> run_ergo.sh && \
+    echo '  exec ./runergo' >> run_ergo.sh && \
+    echo 'else' >> run_ergo.sh && \
+    echo '  exec "$@"' >> run_ergo.sh && \
+    echo 'fi' >> run_ergo.sh && \
+    chmod +x run_ergo.sh
+
+# 7. Add a convenience script to run ErgoAI Studio
+RUN echo '#!/bin/bash' > run_studio.sh && \
+    echo 'cd /opt/ergoai/ERGOAI' >> run_studio.sh && \
+    echo './runErgoAI.sh "$@"' >> run_studio.sh && \
+    chmod +x run_studio.sh
+
+# Set entry point
+WORKDIR /opt/ergoai
+ENTRYPOINT ["/opt/ergoai/run_studio.sh"]

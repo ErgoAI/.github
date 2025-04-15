@@ -9,6 +9,7 @@
   * [Download and Installation](#download-and-installation)
       - [Installing ErgoAI via an official release](#installing-ergoai-via-an-official-release)
       - [Installing ErgoAI from the sources](#installing-ergoai-from-the-sources)
+      - [Installing ErgoAI from Dockerfile](#installing-ergoai-from-dockerfile)
       - [Uninstallation](#uninstallation)
   * [Reporting Bugs](#reporting-bugs)
   * [Bibliography](#bibliography)
@@ -174,6 +175,45 @@ The full details are given in Appendix A of [ErgoAI Reasoner User's Manual](http
 Please subscribe to
 [Ergo and XSB Users Forum](https://groups.google.com/a/coherentknowledge.com/g/ergoai-xsb-forum)
 and, if you like ErgoAI, [give us a star](https://github.com/ErgoAI/ErgoEngine/stargazers).
+
+#### Installing ErgoAI from Dockerfile
+
+Under `integration/` you may find `Dockerfile-ErgoAIStudio`. This Dockerfile has the following features and assumptions:
+
+* Base image is Amazon Correto 8, which is a flavor of openjdk 8 optimized for AWS EC2 but can be used anywhere
+
+* Configures X11 for within the Docker container
+
+* Pulls and builds the latest from ErgoEngine and the Ergo Studio `Studio_fidji` repos
+
+* Builds convenience scripts for running the studio or just the engine on its own
+
+Please note: 
+
+* This Dockerfile is built under the assumption you are deploying on a x86 or amd64 based architecture. It has not been tested on arm64 chips, so please expect potential bugs if running on this architecture.
+
+* If you are deploying this on a remote server and are running an X11 desktop distribution to access the GUI served on the remote server, you will need to use `ssh -X` or `ssh -Y` when connecting to the server from your local machine. This is necessary for the transfer protocols.
+
+Those who want to use the Dockerfile and build ErgoEngine + ErgoAI Studio and access the GUI via X11 can do so via the following:
+
+* Place Dockerfile-ErgoAIStudio on your local system.
+
+* For Ubuntu servers install: `sudo apt-get install -y xauth x11-apps`. For yum-based servers: `sudo yum install -y xorg-x11-xauth xorg-x11-apps`
+
+* Run: `docker build . -f Dockerfile-ErgoAIStudio -t ergoai:latest` (You can rename the tag to whatever you would like.)
+
+* Establish env variable for XAuthority: `export XAUTHORITY=$HOME/.Xauthority`
+
+* Establish DISPLAY variable for X11: `export DISPLAY=localhost:10.0`. Note it does not need to exclusively be `10.0`.
+
+* Build the image: `docker build . -f Dockerfile-ErgoAIStudio -t ergoai:latest` Note the tag does not need to be `ergoai:latest`.
+
+* Run the container: `docker run -it --rm   -e DISPLAY=$DISPLAY   -v /tmp/.X11-unix:/tmp/.X11-unix   -v $HOME/.Xauthority:/root/.Xauthority:ro   --network=host  ergoai:latest`
+
+Completing these steps will then launch the ErgoAI Studio in your local machines X11 application.
+
+Important consideration: If you are using XQuartz on a MacOS system there is a known bug where alpha channels are ignored, causing the GUI to appear all black. To avoid this issue all you need to do is simply increase your computer's zoom level one step. See [here](https://github.com/XQuartz/XQuartz/issues/31#issuecomment-2650339982).
+
 
 #### Uninstallation
 
